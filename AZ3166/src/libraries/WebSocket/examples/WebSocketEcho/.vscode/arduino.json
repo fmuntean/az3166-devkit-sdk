@@ -1,6 +1,10 @@
 {
     "board": "AZ3166:stm32f4:MXCHIP_AZ3166",
     "configuration": "upload_method=OpenOCDMethod",
+<<<<<<<< HEAD:AZ3166/src/libraries/WebSocket/examples/WebSocketEcho/.vscode/arduino.json
     "sketch": "WebSocketEcho.ino",
+========
+    "sketch": "DoorMonitor.ino",
+>>>>>>>> a6adb38 (Merge from pre-release to release (#784)):AZ3166/src/libraries/AzureIoT/examples/DoorMonitor/.vscode/arduino.json
     "output": "./build"
 }
