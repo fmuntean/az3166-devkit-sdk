@@ -1,28 +1,10 @@
-# :warning: ARCHIVED
-
-This repository is no longer maintained and devices can no longer connect to IoT Hub.
-
-Please refer to the following sources for further MXCHIP needs:
-1. [Connect an MXCHIP AZ3166 to Azure IoT
-](https://github.com/azure-rtos/getting-started/tree/master/MXChip/AZ3166) - A guide to connecting the MXCHIP using Azure RTOS
-1. [Azure SDK for Embedded C for Arduino](https://github.com/Azure/azure-sdk-for-c-arduino) - A purpose build SDK for connecting Arduino devices to IoT Hub
-1. [New CA certificate support](https://github.com/microsoft/devkit-sdk/issues/1083) - Workaround to add missing certificates to existing codebase
-
----
-
 # IoT DevKit SDK
 
 This SDK is used to develop and prototype Internet of Things (IoT) solutions leveraging Microsoft Azure services and the **MXChip IoT DevKit** (a.k.a **DevKit**) which is an Arduino compatible board with rich peripherals and sensors.
 
 With this SDK, you can use [Visual Studio Code](https://code.visualstudio.com/) with [Arduino Extension](https://marketplace.visualstudio.com) to rapidly build a full-fledged IoT application that integrates multiple services like Azure IoT Hub, Logic Apps and Cognitive Services.
 
-## Contribution
-
-There are a couple of ways you can contribute to this repo:
-
-- Ideas, feature requests and bugs: We are open to all ideas and we want to get rid of bugs! Use the Issues section to either report a new issue, provide your ideas or contribute to existing threads.
-- Documentation: Found a typo or strangely worded sentences? Submit a PR!
-- Code: Contribute bug fixes, features or design changes.
+## Contributing
 
 There are a couple of ways you can contribute to this repo:
 
