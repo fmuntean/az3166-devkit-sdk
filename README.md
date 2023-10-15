@@ -1,6 +1,6 @@
-# :warning: ARCHIVED
+This repository was forked from the Microsoft repository which is no longer maintained and devices can no longer connect to IoT Hub.
 
-This repository is no longer maintained and devices can no longer connect to IoT Hub.
+Currently is to support my development on this board moving forward but I am open to sugestions on improving this repo.
 
 Please refer to the following sources for further MXCHIP needs:
 1. [Connect an MXCHIP AZ3166 to Azure IoT
