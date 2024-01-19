@@ -500,17 +500,19 @@ int httpd_get_data(httpd_request_t *req, char *content, int length)
 	char *buf;
 
 	/* Is this condition required? */
-	if (req->body_nbytes >= HTTPD_MAX_MESSAGE - 2)
-		return -kInProgressErr;
+	//if (req->body_nbytes >= HTTPD_MAX_MESSAGE - 2)
+	//	return -kInProgressErr;
 
 
-	buf = malloc(HTTPD_MAX_MESSAGE);
-	if (!buf) {
-		httpd_d("Failed to allocate memory for buffer");
-		return -kInProgressErr;
-	}
-
+	
 	if (!req->hdr_parsed) {
+
+		buf = malloc(HTTPD_MAX_MESSAGE);
+		if (!buf) {
+			httpd_d("Failed to allocate memory for buffer");
+			return -kInProgressErr;
+		}
+
 		ret = httpd_parse_hdr_tags(req, req->sock, buf,
 			HTTPD_MAX_MESSAGE);
 
@@ -536,7 +538,7 @@ int httpd_get_data(httpd_request_t *req, char *content, int length)
 	httpd_d("Read %d bytes and remaining %d bytes",
 		ret, req->remaining_bytes);
 out:
-	free(buf);
+	if (buf) {free(buf);}
 	return req->remaining_bytes;
 }
 
