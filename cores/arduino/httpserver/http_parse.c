@@ -650,7 +650,7 @@ static int __httpd_parse_all_tags(char *inbuf, const char *tag,
   ptr = inbuf;
   while (1) {
     ptr = httpd_parse_msgbody(ptr, tag, val, val_len, &found);
-    if (ptr == NULL) {
+    if (ptr != NULL) {
       httpd_d("Failed to parse request");
       return -kInProgressErr;
     }
