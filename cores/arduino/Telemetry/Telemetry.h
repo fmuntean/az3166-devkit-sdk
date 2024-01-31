@@ -4,6 +4,8 @@
 #ifndef __SYSTEM_TELEMERTY_H__
 #define __SYSTEM_TELEMERTY_H__
 
+#ifdef TELEMETRY
+
 #ifdef __cplusplus
 extern "C"{
 #endif  // __cplusplus
@@ -22,6 +24,20 @@ extern "C"{
 
 #ifdef __cplusplus
 }
+#endif
+
+#else
+    // Initialize the system telemetry
+    #define telemetry_init() ;
+    
+    // Send an telemetry data to AI asynchronously
+    #define send_telemetry_data(...) ;
+        
+    // Send an telemetry data to AI asynchronously
+    #define send_telemetry_data_async(...) ;
+    
+    // Send an telemetry data to AI synchronously
+    #define send_telemetry_data_sync(...) ;
 #endif
 
 #endif // __SYSTEM_TELEMERTY_H__

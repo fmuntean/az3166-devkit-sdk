@@ -5,10 +5,8 @@
 #include "Telemetry.h"
 #include "TelemetryClient.h"
 
-#ifndef ENABLETRACE
-// By default trace is enabled
-#define ENABLETRACE           1
-#endif
+#if ENABLETRACE
+
 
 // Todo, the url and key of AI shall be get from REST service / web page, instead of hardcode here 
 static const char *AI_ENDPOINT = "https://dc.services.visualstudio.com/v2/track";
@@ -55,3 +53,5 @@ void send_telemetry_data_sync(const char *iothub, const char *event, const char 
 #ifdef __cplusplus
 }
 #endif  // __cplusplus
+
+#endif
